@@ -1,0 +1,8 @@
+body {
+  font: 100%/1.5 system-ui;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+}
