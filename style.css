@@ -1,8 +1,60 @@
 body {
   font: 100%/1.5 system-ui;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  margin-top: 0;
 }
 
 img {
   max-width: 200px;
   height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+form input,
+form textarea,
+form button {
+  font: inherit;
+}
+
+form input,
+form textarea {
+  width: 300px;
+  max-width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+form textarea {
+  height: 120px;
+}
+
+button {
+  padding: 8px 14px;
+  cursor: pointer;
 }
