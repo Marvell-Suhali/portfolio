@@ -1,3 +1,4 @@
+/* GLOBAL SETTINGS */
 html {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
@@ -13,6 +14,7 @@ body {
   color: #222;
 }
 
+/* NAV BAR */
 nav {
   display: flex;
   margin-bottom: 30px;
@@ -38,6 +40,7 @@ nav a:hover {
   background-color: oklch(from var(--color-accent) 95% 5% h);
 }
 
+/* HEADINGS */
 h1 {
   font-size: 400%;
   margin-bottom: 10px;
@@ -51,6 +54,7 @@ h2 {
   text-wrap: balance;
 }
 
+/* SECTIONS (HOME + RESUME) */
 section {
   background: white;
   padding: 20px;
@@ -59,6 +63,7 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* IMAGES */
 img {
   max-width: 100%;
   border-radius: 10px;
@@ -66,6 +71,7 @@ img {
   display: block;
 }
 
+/* PROJECTS GRID */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -77,8 +83,13 @@ img {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  /* makes all cards equal height */
+  display: flex;
+  flex-direction: column;
 }
 
+/* spacing improvements */
 .projects h2 {
   margin: 0 0 0.5em 0;
 }
@@ -90,6 +101,17 @@ img {
   margin-bottom: 1em;
 }
 
+.projects p {
+  margin-top: auto;
+}
+
+/* hover effect (polish) */
+.projects article:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
+
+/* CONTACT FORM */
 input,
 textarea,
 button {
