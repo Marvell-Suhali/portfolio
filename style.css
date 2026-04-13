@@ -63,6 +63,7 @@ img {
   max-width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
+  display: block;
 }
 
 .projects {
@@ -75,14 +76,18 @@ img {
   background: white;
   padding: 15px;
   border-radius: 10px;
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .projects h2 {
-  margin: 0;
+  margin: 0 0 0.5em 0;
+}
+
+.projects img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1em;
 }
 
 input,
