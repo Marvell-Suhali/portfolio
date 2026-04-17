@@ -4,36 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
+
   <link rel="stylesheet" href="../style.css">
+  <script src="../global.js" type="module"></script>
 </head>
+
 <body>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="index.html" class="current">Contact</a>
-    <a href="../resume/index.html">Resume</a>
-    <a href="https://github.com/Marvell-Suhali" target="_blank">GitHub</a>
-  </nav>
 
   <h1>Contact</h1>
 
   <form action="mailto:msuhali@ucsd.edu" method="POST" enctype="text/plain">
+    
     <label>
       Your Email:
-      <input type="email" name="email">
+      <input type="email" name="email" required>
     </label>
 
     <label>
       Subject:
-      <input type="text" name="subject">
+      <input type="text" name="subject" required>
     </label>
 
     <label>
       Message:
-      <textarea name="body"></textarea>
+      <textarea name="body" required></textarea>
     </label>
 
     <button type="submit">Send</button>
+
   </form>
+
 </body>
 </html>
