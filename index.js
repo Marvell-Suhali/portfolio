@@ -14,15 +14,21 @@ const profileStats = document.querySelector('#profile-stats');
 
 if (profileStats) {
   profileStats.innerHTML = `
-    <dl>
-      <dt>Public Repos</dt>
-      <dd>${githubData.public_repos}</dd>
+    <div class="github-grid">
+      <div>
+        <p>Repos</p>
+        <h3>${githubData.public_repos}</h3>
+      </div>
 
-      <dt>Followers</dt>
-      <dd>${githubData.followers}</dd>
+      <div>
+        <p>Followers</p>
+        <h3>${githubData.followers}</h3>
+      </div>
 
-      <dt>Following</dt>
-      <dd>${githubData.following}</dd>
-    </dl>
+      <div>
+        <p>Following</p>
+        <h3>${githubData.following}</h3>
+      </div>
+    </div>
   `;
 }

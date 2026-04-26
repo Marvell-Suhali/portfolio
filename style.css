@@ -132,3 +132,21 @@ form label {
 form button {
   grid-column: 1 / -1;
 }
+
+.github-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.github-grid div {
+  text-align: center;
+}
+
+.github-grid p {
+  margin: 0;
+}
+
+.github-grid h3 {
+  margin-top: 0.5rem;
+}
