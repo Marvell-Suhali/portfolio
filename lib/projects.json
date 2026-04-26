@@ -2,25 +2,25 @@
   {
     "title": "Data Analysis",
     "year": "2026",
-    "image": "https://dsc106.com/labs/2/images/empty.svg",
+    "image": "https://placehold.co/600x400?text=Data+Analysis",
     "description": "Python, R, SQL projects."
   },
   {
     "title": "Machine Learning",
     "year": "2026",
-    "image": "https://dsc106.com/labs/2/images/empty.svg",
+    "image": "https://placehold.co/600x400?text=Machine+Learning",
     "description": "Model building and evaluation."
   },
   {
     "title": "Personal Website",
     "year": "2026",
-    "image": "https://dsc106.com/labs/2/images/empty.svg",
+    "image": "https://placehold.co/600x400?text=Personal+Website",
     "description": "HTML, CSS, JS portfolio."
   },
   {
     "title": "Sports Data",
     "year": "2026",
-    "image": "https://dsc106.com/labs/2/images/empty.svg",
+    "image": "https://placehold.co/600x400?text=Sports+Data",
     "description": "Sports analytics projects."
   }
 ]
