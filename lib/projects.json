@@ -2,25 +2,25 @@
   {
     "title": "Data Analysis",
     "year": "2026",
-    "image": "images/empty.svg",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Python, R, SQL projects."
   },
   {
     "title": "Machine Learning",
     "year": "2026",
-    "image": "images/empty.svg",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Model building and evaluation."
   },
   {
     "title": "Personal Website",
     "year": "2026",
-    "image": "images/empty.svg",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "HTML, CSS, JS portfolio."
   },
   {
     "title": "Sports Data",
     "year": "2026",
-    "image": "images/empty.svg",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Sports analytics projects."
   }
 ]
