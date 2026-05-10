@@ -1,5 +1,3 @@
-console.log("META JS LOADED");
-
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 let data = [];
@@ -218,6 +216,11 @@ function renderScatterPlot(commits) {
         .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00'),
     );
 
+  svg
+    .append('g')
+    .attr('class', 'brush')
+    .call(d3.brush().on('start brush end', brushed));
+
   const dots = svg.append('g').attr('class', 'dots');
 
   const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
@@ -245,7 +248,7 @@ function renderScatterPlot(commits) {
       updateTooltipVisibility(false);
     });
 
-  svg.call(d3.brush().on('start brush end', brushed));
+  dots.raise();
 }
 
 data = await loadData();
