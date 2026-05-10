@@ -70,21 +70,39 @@ function renderCommitInfo(data, commits) {
 function renderTooltipContent(commit) {
   document.getElementById('commit-link').href = commit.url;
   document.getElementById('commit-link').textContent = commit.id.slice(0, 7);
-  document.getElementById('commit-date').textContent = commit.datetime.toLocaleDateString();
-  document.getElementById('commit-time').textContent = commit.datetime.toLocaleTimeString();
+  document.getElementById('commit-date').textContent =
+    commit.datetime.toLocaleDateString();
+  document.getElementById('commit-time').textContent =
+    commit.datetime.toLocaleTimeString();
   document.getElementById('commit-author').textContent = commit.author;
   document.getElementById('commit-lines').textContent = commit.totalLines;
 }
 
 function updateTooltipVisibility(isVisible) {
   const tooltip = document.getElementById('commit-tooltip');
+
   tooltip.hidden = !isVisible;
+
+  tooltip.style.position = 'fixed';
+  tooltip.style.left = '20px';
+  tooltip.style.top = '20px';
+  tooltip.style.background = 'white';
+  tooltip.style.color = 'black';
+  tooltip.style.border = '1px solid #ccc';
+  tooltip.style.borderRadius = '0.5rem';
+  tooltip.style.padding = '0.75rem';
+  tooltip.style.boxShadow = '0 4px 12px rgb(0 0 0 / 20%)';
+  tooltip.style.pointerEvents = 'none';
+  tooltip.style.zIndex = '9999';
+  tooltip.style.maxWidth = '250px';
 }
 
-function updateTooltipPosition(event) {
+function updateTooltipPosition() {
   const tooltip = document.getElementById('commit-tooltip');
-  tooltip.style.left = `${event.clientX + 10}px`;
-  tooltip.style.top = `${event.clientY + 10}px`;
+
+  // Fixed position to prevent shaking/glitching
+  tooltip.style.left = '20px';
+  tooltip.style.top = '20px';
 }
 
 function isCommitSelected(selection, commit) {
@@ -238,10 +256,10 @@ function renderScatterPlot(commits) {
       d3.select(event.currentTarget).style('fill-opacity', 1);
       renderTooltipContent(commit);
       updateTooltipVisibility(true);
-      updateTooltipPosition(event);
+      updateTooltipPosition();
     })
-    .on('mousemove', (event) => {
-      updateTooltipPosition(event);
+    .on('mousemove', () => {
+      updateTooltipPosition();
     })
     .on('mouseleave', (event) => {
       d3.select(event.currentTarget).style('fill-opacity', 0.7);
