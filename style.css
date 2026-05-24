@@ -306,3 +306,11 @@ circle:hover {
 body:has(#chart) {
   max-width: 1100px;
 }
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color);  /* must be var(--color), not steelblue */
+  border-radius: 50%;
+}
