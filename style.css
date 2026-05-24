@@ -306,6 +306,3 @@ circle:hover {
 body:has(#chart) {
   max-width: 1100px;
 }
-html, body {
-  height: 100%;
-}
