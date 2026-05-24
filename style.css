@@ -263,11 +263,14 @@ circle:hover {
   opacity: 0.8;
 }
 
-/* Lab 08 scrollytelling layout */
+/* Lab 08 chart layout */
 
 #scrolly-1 {
-  position: relative;
-  margin-top: 1rem;
+  width: 100%;
+}
+
+#scatter-story {
+  display: none;
 }
 
 #scatter-plot {
@@ -276,22 +279,13 @@ circle:hover {
 
 #chart {
   width: 100%;
+  max-width: 1000px;
 }
 
 #chart svg {
+  display: block;
   width: 100%;
-  max-width: 1000px;
   height: auto;
-}
-
-#scatter-story {
-  margin-top: 2rem;
-}
-
-.step {
-  max-width: 50rem;
-  padding: 1rem 0 4rem 0;
-  line-height: 1.5;
 }
 
 /* Lab 08 file unit visualization */
@@ -341,6 +335,7 @@ circle:hover {
 
 .slider-container {
   max-width: 1000px;
+  margin: 1em 0;
 }
 
 .slider-container label {
@@ -356,4 +351,10 @@ circle:hover {
 
 #commit-time {
   white-space: nowrap;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+body:has(#chart) {
+  max-width: 1200px;
 }
