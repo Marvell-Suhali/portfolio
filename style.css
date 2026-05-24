@@ -377,3 +377,28 @@ body:has(#chart) {
   width: 100%;
   height: auto;
 }
+
+/* TEMP: hide scrollytelling until chart + slider works */
+#scatter-story {
+  display: none !important;
+}
+
+#scrolly-1 {
+  display: block !important;
+  width: 100%;
+}
+
+#scatter-plot {
+  width: 100%;
+}
+
+#chart {
+  width: 100%;
+  max-width: 1000px;
+}
+
+#chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
