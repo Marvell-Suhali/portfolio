@@ -263,123 +263,6 @@ circle:hover {
   opacity: 0.8;
 }
 
-/* Lab 08 chart layout */
-
-#scrolly-1 {
-  width: 100%;
-}
-
-#scatter-story {
-  display: none;
-}
-
-#scatter-plot {
-  width: 100%;
-}
-
-#chart {
-  width: 100%;
-  max-width: 1000px;
-}
-
-#chart svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Lab 08 file unit visualization */
-
-#files {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 0.5em 1em;
-  margin-top: 2em;
-}
-
-#files > div {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-#files dt {
-  grid-column: 1;
-}
-
-#files dt small {
-  display: block;
-  font-size: 0.8em;
-  opacity: 0.7;
-  margin-top: 0.25em;
-}
-
-#files dd {
-  grid-column: 2;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  align-content: start;
-  gap: 0.15em;
-  padding-top: 0.6em;
-  margin-left: 0;
-}
-
-.loc {
-  display: flex;
-  width: 0.5em;
-  aspect-ratio: 1;
-  background: var(--color);
-  border-radius: 50%;
-}
-
-.slider-container {
-  max-width: 1000px;
-  margin: 1em 0;
-}
-
-.slider-container label {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1em;
-}
-
-#commit-progress {
-  width: 100%;
-}
-
-#commit-time {
-  white-space: nowrap;
-  font-size: 0.9em;
-  opacity: 0.8;
-}
-
-body:has(#chart) {
-  max-width: 1100px;
-}
-
-#scatter-story {
-  display: none !important;
-}
-
-#scatter-plot {
-  width: 100%;
-}
-
-#chart {
-  width: 100%;
-  max-width: 1000px;
-}
-
-#chart svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Lab 08 scrollytelling layout */
-
 #scrolly-1 {
   display: grid;
   grid-template-columns: 35ch 1fr;
@@ -391,12 +274,14 @@ body:has(#chart) {
 
 #scatter-story {
   grid-column: 1;
+  display: block; /* remove the display:none !important */
 }
 
 #scatter-plot {
   grid-column: 2;
   position: sticky;
   top: 1rem;
+  height: 50vh;        /* ← this is critical for sticky to work */
   width: 100%;
 }
 
