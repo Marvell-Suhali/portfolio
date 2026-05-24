@@ -358,3 +358,22 @@ circle:hover {
 body:has(#chart) {
   max-width: 1200px;
 }
+
+#scatter-story {
+  display: none !important;
+}
+
+#scatter-plot {
+  width: 100%;
+}
+
+#chart {
+  width: 100%;
+  max-width: 1000px;
+}
+
+#chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
