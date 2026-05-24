@@ -237,7 +237,6 @@ circle:hover {
   stroke: black;
   stroke-width: 2px;
 }
-/* Lab 08 slider */
 
 .slider-container {
   display: flex;
@@ -274,14 +273,14 @@ circle:hover {
 
 #scatter-story {
   grid-column: 1;
-  display: block; /* remove the display:none !important */
+  display: block; 
 }
 
 #scatter-plot {
   grid-column: 2;
   position: sticky;
   top: 1rem;
-  height: 80vh;        /* ← this is critical for sticky to work */
+  height: 80vh;        
   width: 100%;
 }
 
@@ -307,10 +306,50 @@ body:has(#chart) {
   max-width: 1100px;
 }
 
-.loc {
+#files {
+  display: grid;
+  grid-template-columns: 12em 1fr;
+  gap: 0.5em 1em;
+  margin-top: 2em;
+  max-width: 1000px;
+}
+
+#files > div {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: start;
+}
+
+#files dt {
+  grid-column: 1;
+  font-size: 0.85em;
+}
+
+#files dt code {
+  display: block;
+}
+
+#files dt small {
+  display: block;
+  font-size: 0.75em;
+  opacity: 0.7;
+  margin-top: 0.2em;
+}
+
+#files dd {
+  grid-column: 2;
   display: flex;
-  width: 0.5em;
+  flex-wrap: wrap;
+  gap: 0.15em;
+  margin: 0;
+  padding: 0.25em 0;
+}
+
+.loc {
+  width: 0.45em;
   aspect-ratio: 1;
-  background: var(--color);  /* must be var(--color), not steelblue */
+  background: var(--color);
   border-radius: 50%;
+  flex: none;
 }
