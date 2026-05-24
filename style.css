@@ -267,27 +267,30 @@ circle:hover {
 
 #scrolly-1 {
   position: relative;
-  display: flex;
-  gap: 1rem;
   margin-top: 1rem;
 }
 
-#scrolly-1 > * {
-  flex: 1;
+#scatter-plot {
+  width: 100%;
+}
+
+#chart {
+  width: 100%;
+}
+
+#chart svg {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
 }
 
 #scatter-story {
-  position: relative;
-}
-
-#scatter-plot {
-  position: sticky;
-  top: 1rem;
-  height: 70vh;
+  margin-top: 2rem;
 }
 
 .step {
-  padding-bottom: 80vh;
+  max-width: 50rem;
+  padding: 1rem 0 4rem 0;
   line-height: 1.5;
 }
 
@@ -334,4 +337,23 @@ circle:hover {
   aspect-ratio: 1;
   background: var(--color);
   border-radius: 50%;
+}
+
+.slider-container {
+  max-width: 1000px;
+}
+
+.slider-container label {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1em;
+}
+
+#commit-progress {
+  width: 100%;
+}
+
+#commit-time {
+  white-space: nowrap;
 }
