@@ -281,7 +281,7 @@ circle:hover {
   grid-column: 2;
   position: sticky;
   top: 1rem;
-  height: 50vh;        /* ← this is critical for sticky to work */
+  height: 80vh;        /* ← this is critical for sticky to work */
   width: 100%;
 }
 
