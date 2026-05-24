@@ -302,21 +302,19 @@ function updateFileDisplay(commitsToShow) {
 
   const files = d3
     .groups(lines, (d) => d.file)
-    .map(([name, lines]) => {
-      return { name, lines };
-    })
+    .map(([name, lines]) => ({ name, lines }))
     .sort((a, b) => b.lines.length - a.lines.length);
 
   const filesContainer = d3
     .select('#files')
-    .selectAll('div')
+    .selectAll('div.file-row')
     .data(files, (d) => d.name)
-    .join((enter) =>
-      enter.append('div').call((div) => {
-        div.append('dt');
-        div.append('dd');
-      }),
-    );
+    .join((enter) => {
+      const div = enter.append('div').attr('class', 'file-row');
+      div.append('dt');
+      div.append('dd');
+      return div;
+    });
 
   filesContainer
     .select('dt')
@@ -324,11 +322,11 @@ function updateFileDisplay(commitsToShow) {
 
   filesContainer
     .select('dd')
-    .selectAll('div')
+    .selectAll('span.loc')
     .data((d) => d.lines)
-    .join('div')
+    .join('span')
     .attr('class', 'loc')
-    .attr('style', (d) => `--color: ${colors(d.type)}`);
+    .style('--color', (d) => colors(d.type));
 }
 
 function updateTimeDisplay(commitMaxTime) {
@@ -389,7 +387,10 @@ function renderStory() {
       const commitsToShow = commits.filter((d) => d.datetime <= commitMaxTime);
 
       updateScatterPlot(commitsToShow);
-      updateFileDisplay(commitsToShow);
+
+      // Keep the bottom file visualization complete while scrolling
+      updateFileDisplay(commits);
+
       updateTimeDisplay(commitMaxTime);
 
       d3.select('#commit-progress').property('value', timeScale(commitMaxTime));
