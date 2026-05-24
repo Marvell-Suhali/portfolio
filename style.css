@@ -378,17 +378,24 @@ body:has(#chart) {
   height: auto;
 }
 
-/* TEMP: hide scrollytelling until chart + slider works */
-#scatter-story {
-  display: none !important;
-}
+/* Lab 08 final scrollytelling layout */
 
 #scrolly-1 {
+  display: grid !important;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+#scatter-story {
   display: block !important;
-  width: 100%;
+  grid-column: 1;
 }
 
 #scatter-plot {
+  grid-column: 2;
+  position: sticky;
+  top: 2rem;
   width: 100%;
 }
 
@@ -401,4 +408,11 @@ body:has(#chart) {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.step {
+  min-height: 70vh;
+  padding: 1rem;
+  line-height: 1.5;
+  border-left: 3px solid var(--color-accent);
 }
